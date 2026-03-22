@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ipsum — know yourself.</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+
     <style>
         :root {
             /* Colori dal Design System */
@@ -46,16 +49,20 @@
             border-bottom: var(--border-light);
         }
 
+        /* UPDATED LOGO CSS */
         .logo {
-            font-size: 24px;
-            font-weight: 300;
+            /* Uses Apple's "New York" on iOS/macOS, falls back to Playfair Display elsewhere */
+            font-family: "ui-serif", "New York", "Playfair Display", Georgia, serif;
+            font-size: 42px; 
+            font-weight: 200; /* ultraLight */
             text-decoration: none;
             color: var(--text-black);
+            letter-spacing: -1px;
         }
 
         .brand-i {
             color: var(--accent-orange);
-            font-weight: 500;
+            /* Inherits the ultra-light weight automatically */
         }
 
         .nav-links a {
@@ -96,6 +103,12 @@
             line-height: 1.1;
             margin-bottom: 16px;
             letter-spacing: -0.5px;
+        }
+
+        /* Makes sure the H1 logo also uses the serif font */
+        h1, h1 .brand-i {
+            font-family: "ui-serif", "New York", "Playfair Display", Georgia, serif;
+            font-weight: 200;
         }
 
         .tagline {
