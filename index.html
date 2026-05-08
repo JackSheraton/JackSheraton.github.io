@@ -51,10 +51,9 @@
 
         /* UPDATED LOGO CSS */
         .logo {
-            /* Uses Apple's "New York" on iOS/macOS, falls back to Playfair Display elsewhere */
             font-family: "ui-serif", "New York", "Playfair Display", Georgia, serif;
             font-size: 42px; 
-            font-weight: 200; /* ultraLight */
+            font-weight: 200; 
             text-decoration: none;
             color: var(--text-black);
             letter-spacing: -1px;
@@ -62,7 +61,6 @@
 
         .brand-i {
             color: var(--accent-orange);
-            /* Inherits the ultra-light weight automatically */
         }
 
         .nav-links a {
@@ -81,7 +79,7 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 100px 20px 40px; /* Padding top per compensare la navbar fissa */
+            padding: 100px 20px 40px; 
         }
 
         /* Sezione Hero */
@@ -105,7 +103,6 @@
             letter-spacing: -0.5px;
         }
 
-        /* Makes sure the H1 logo also uses the serif font */
         h1, h1 .brand-i {
             font-family: "ui-serif", "New York", "Playfair Display", Georgia, serif;
             font-weight: 200;
@@ -153,21 +150,7 @@
             justify-content: center;
         }
 
-        .phone-placeholder {
-            width: 280px;
-            height: 580px;
-            background-color: var(--card-bg);
-            border-radius: 40px;
-            border: 8px solid #E5E5E5;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-
-        /* Sezioni interne (Supporto / Privacy) usando le Card */
+        /* Sezioni interne usando le Card */
         .section-header {
             margin: 80px 0 32px;
             font-size: 28px;
@@ -195,6 +178,23 @@
 
         .card a:hover {
             text-decoration: underline;
+        }
+        
+        /* QR Code Section */
+        .qr-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .qr-code-img {
+            width: 200px;
+            height: 200px;
+            margin-top: 24px;
+            border-radius: 12px;
+            border: var(--border-light);
+            box-shadow: var(--shadow-light);
         }
 
         .privacy-list {
@@ -230,7 +230,7 @@
                 margin: 0 auto 40px;
             }
             .nav-links {
-                display: none; /* Nasconde i link su mobile per pulizia */
+                display: none; 
             }
             .card {
                 padding: 24px;
@@ -243,6 +243,7 @@
     <nav>
         <a href="#" class="logo"><span class="brand-i">i</span>psum</a>
         <div class="nav-links">
+            <a href="#download">Download</a>
             <a href="#support">Support</a>
             <a href="#privacy">Privacy</a>
         </div>
@@ -254,12 +255,19 @@
                 <h1><span class="brand-i">i</span>psum</h1>
                 <p class="tagline">know yourself.</p>
                 <p class="hero-description">Your feelings, distilled into a personal portrait. Track your moods, capture moments, and reflect beautifully.</p>
-                <a href="#download" class="btn-download">Coming soon to App Store</a>
+                <a href="https://apps.apple.com/it/app/ipsum-know-yourself/id6760194680?l=en-GB" class="btn-download" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
             </div>
             <div class="hero-image">
            <img src="screenshot.jpeg" alt="Schermata dell'app ipsum" style="max-width: 100%; height: auto; max-height: 580px; border-radius: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.08);">
             </div>
         </section>
+
+        <h2 id="download" class="section-header">Get the App</h2>
+        <div class="card qr-card">
+            <p style="font-size: 18px; font-weight: 500;">Scan to download</p>
+            <p style="color: var(--text-secondary);">Open your iPhone's camera and point it at the code below to view <strong>ipsum</strong> on the App Store.</p>
+            <img src="qr-code.png" alt="Scan QR code to download ipsum" class="qr-code-img">
+        </div>
 
         <h2 id="support" class="section-header">Support & Contact</h2>
         <div class="card">
